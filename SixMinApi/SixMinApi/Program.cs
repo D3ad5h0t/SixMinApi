@@ -82,7 +82,7 @@ app.MapDelete("api/v1/commands/{id}", async (ICommandRepo repo, IMapper mapper, 
     }
 
     repo.DeleteCommand(command);
-    
+
     await repo.SaveChanges();
 
     return Results.NoContent();
